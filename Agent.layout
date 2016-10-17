@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="default" />
+	<File name="GUI.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="1284" topLine="107" />
+	</File>
+	<File name="agent.cpp" open="1" top="1" tabpos="2">
+		<Cursor position="386" topLine="6" />
+	</File>
+	<File name="agent.h" open="1" top="0" tabpos="1">
+		<Cursor position="257" topLine="0" />
+	</File>
+	<File name="environment.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="4675" topLine="15" />
+	</File>
+	<File name="environment.h" open="0" top="0" tabpos="2">
+		<Cursor position="942" topLine="0" />
+	</File>
+	<File name="evaluator.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="451" topLine="0" />
+	</File>
+	<File name="main.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
