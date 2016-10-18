@@ -34,5 +34,6 @@ The main methods of the agent are `Think` and `WhereToMove`. Let's start with `T
   
  `WhereToMove` reasons the best action between `actFORWARD`, `actTURN_L` and `actTURN_R`, depending on how long ago the agent didn't go through a cell, if the agent has detect a wall or not and the differences of time between the cells
     
-    
+![start](/images/start.png) ![end](/images/end.png)
  
+To compile the files, we need to install ***freeglut3-dev***.
