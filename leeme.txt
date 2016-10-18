@@ -1,7 +1,0 @@
-Para compilar el software es necesario
-instalar previamente la libreria "freeglut3-dev".
-
-Una vez instalada, ejecutar "Make" en el directorio
-donde se encuentra el código fuente.
-
-Para ejecutar, escribir "./agent"
