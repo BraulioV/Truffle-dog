@@ -33,7 +33,7 @@ The main methods of the agent are `Think` and `WhereToMove`. Let's start with `T
     
   After that, the agent will update the last action, and increase the time of all the `cell_data.not_read_since_` of the map, and return the action.
   
- `WhereToMove` reasons the best action between `actFORWARD`, `actTURN_L` and `actTURN_R`, depending on how long ago the agent didn't go through a cell, if the agent has detect a wall or not and the differences of time between the cells
+ `WhereToMove` reasons the best action between `actFORWARD`, `actTURN_L` and `actTURN_R`, depending on how long ago the agent didn't go through a cell, if the agent has detect a wall or not and the differences of time between the cells.
     
 ![start](/images/start.png) ![end](/images/end.png)
  
