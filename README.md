@@ -1,11 +1,12 @@
 # Truffle-dog
+
 ## A simple IA that picks truffles from a map before they gets rotten to score more points implemented for Artificial Intelligence subject of UGR in 2014-2015.
 
 The part that I implemented is `agent.h` and `agent.cpp`, that is where the magic comes true. It's a simple AI that moves the dog in different directions to pick the truffles as big as possible, trying to get more points.
 
-The agent implements a map of the world. This map is a matrix of $n\times n$ size, comoposed of `cell_data_`. `cell_data_` is a struct that stores if the cell is a wall or not, the size of the truffle (if there's a truffle in this cell), when was the last time that the cell was read (a cell is read when the agent has sniffed it) and when was the last time that the agent pass over that cell. This is used to build a map of our world and improves the search of our truffles.
+The agent implements a map of the world. This map is a matrix of *n* x *n* size, comoposed of `cell_data_`. `cell_data_` is a struct that stores if the cell is a wall or not, the size of the truffle (if there's a truffle in this cell), when was the last time that the cell was read (a cell is read when the agent has sniffed it or he has trye to extract a truffle) and when was the last time that the agent pass over that cell. This is used to build a map of our world and improves the search of our truffles.
 
-Also, the agent has knowledge of the last action performed, his orientation (North: 0, East: 1, South:2 and West:3), if he hit a wall or not (`bump_` boolean), his position on the map, the truffle size of the cell and an interger that limit the time that the agent has to sniff on a `cell_data_`.
+Also, the agent has knowledge of the last action performed, his orientation (North: 0, East: 1, South:2 and West:3), if he hit a wall or not (`bump_` boolean), his position on the map, the truffle size of the cell and an interger that limit the time that the agent has to sniff on a `cell_data_` and the minimun time to wait to extract a truffle.
 
 These are the actions that the agent can perform:
   
@@ -22,7 +23,7 @@ The main methods of the agent are `Think` and `WhereToMove`. Let's start with `T
     * ___actTURN_L___ and ___actTURN_R___: both actions will produce an update of the orientation of the agent, increasing by one the orientation in case of *actTURN_R* and decreasing by one the orientation in case of *actTURN_L*.
     * ___actSNIFF___: update the current `cell_data_.size` to the `truffle_size` of the agent, to mark the size of the truffle on that position at the current moment.
   
-    After that, the agent will choose the next action, depending of the following conditions are satisfied or not:
+    After that, the agent will choose the next action, depending on if the following conditions are satisfied or not:
     
     1. **The agent can sniff and the `time_to_smell_` is multiple of five**: when this condition is satisfied, the action is `actSNIFF`. If `time_to_smell_`is greater or equal to the `TIME` of the agent, the agent will try to estimate if the map is fast growth time of truffles map or not, and will update the parameter `can_i_smell_`to  `false`. This is use only to estimate the speed of the growth time of the truffle. Once is done, the agent is not allowed to sniff anymore.
     
